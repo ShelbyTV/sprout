@@ -32,6 +32,13 @@ osx_defaults 'toggle dock magnification on/off' do
   boolean node['dock_preferences']['magnification']
 end
 
+osx_defaults "adjusts magnified dock icon size to #{node['dock_preferences']['largesize']}" do
+  domain 'com.apple.dock'
+  key 'largesize'
+  integer node['dock_preferences']['largesize']
+  only_if { node['dock_preferences']['largesize'] }
+end
+
 execute 'relaunch dock' do
   command 'killall Dock'
   only_if { !node['dock_preferences'].empty? }
