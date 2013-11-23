@@ -1,7 +1,7 @@
-git_user_name = system("git config --get user.name")
-git_user_email = system("git config --get user.email")
+git_user_name = `git config --get user.name`.chomp
+git_user_email = `git config --get user.email`.chomp
 
-unless git_user_name and git_user_email
+if git_user_name.empty? or git_user_email.empty?
   STDOUT.puts("\n\n\nConfigure git global configuration...") 
   STDOUT.print("\nWhat is your git username?\n>")
   git_user_name = STDIN.gets().chomp()
