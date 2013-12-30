@@ -3,7 +3,7 @@ execute "installing CocoaPods" do
   user node['current_user']
 end
 
-execute "rehashing rbenv" do
+execute "rehashing rbenv for cocoapods" do
   command "rbenv rehash"
   user node['current_user']
   only_if { system("which rbenv | grep 'rbenv' > /dev/null 2>&1") }
