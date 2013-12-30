@@ -34,19 +34,19 @@ osx_defaults "Make Safari’s search banners default to Contains instead of Star
   boolean false
 end
 
-osx_defaults "Enable the Develop menu and the Web Inspector in Safari" do
+osx_defaults "Enable the Develop menu and the Web Inspector in Safari (1/3)" do
   domain 'com.apple.safari'
   key 'IncludeDevelopMenu'
   boolean true
 end
 
-osx_defaults "Enable the Develop menu and the Web Inspector in Safari" do
+osx_defaults "Enable the Develop menu and the Web Inspector in Safari (2/3)" do
   domain 'com.apple.safari'
   key 'WebKitDeveloperExtrasEnabledPreferenceKey'
   boolean true
 end
 
-osx_defaults "Enable the Develop menu and the Web Inspector in Safari" do
+osx_defaults "Enable the Develop menu and the Web Inspector in Safari (3/3)" do
   domain 'com.apple.safari'
   key 'com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled'
   boolean true
